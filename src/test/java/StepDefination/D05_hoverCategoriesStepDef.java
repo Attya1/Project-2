@@ -24,7 +24,7 @@ public class D05_hoverCategoriesStepDef {
         List<WebElement> categories = home.getCategoriesWebElm();
         int count = categories.size();
         int min = 0;
-        int max = count - 1;   //  selecting random value from 0 to size that's why  max = count-1
+        int max = count - 1;
         int selectedMainCategory = (int) Math.floor(Math.random() * (max - min + 1) + min);
         action.moveToElement(categories.get(selectedMainCategory)).perform();
         Thread.sleep(2000);

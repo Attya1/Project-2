@@ -42,7 +42,7 @@ public class D08_WishlistStepDef {
     }
     @Then("user should find the product")
     public void checkOnProduct(){
-        //Assert htc phone
+
         System.out.println(home.findProductQty(productsName[1]));
         Assert.assertTrue(home.findProductQty(productsName[1])>0);
 

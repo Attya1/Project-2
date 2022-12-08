@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="24" time="712.876">
+<testcase classname="test register" name="Register with valid data" time="100.266">
+<failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. &#10;Host info: host: 'DESKTOP-HLNE750', ip: '192.168.1.13'&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]" type="org.openqa.selenium.SessionNotCreatedException"><![CDATA[Given initialize register feature...........................................skipped
+When user press register icon...............................................skipped
+And user selects "male" and enters "attya" as first name, "mebed" as last name, "attyamebed@gmail.com" as email, "AttyaCO" as company, "Attya@mebed" as password and "Attya@mebed" as confirm password.skipped
+And user set his birthday as follow "29" Day "7" Month "1994" Year..........skipped
+And user clicks on register button..........................................skipped
+Then successful registration message appears................................skipped
+
+StackTrace:
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-HLNE750', ip: '192.168.1.13'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+	at StepDefination.Hooks.OpenBrowser(Hooks.java:16)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/0:0:0:0:0:0:0:1:16462
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:122)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+	at StepDefination.Hooks.OpenBrowser(Hooks.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.net.ConnectException: Connection refused: no further information: localhost/0:0:0:0:0:0:0:1:16462
+	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
+	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
+	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
+	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/0:0:0:0:0:0:0:1:16462
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+]]></failure>
+</testcase>
+<testcase classname="test register" name="user didn't enter any data" time="77.408">
+<system-out><![CDATA[Given initialize register feature...........................................passed
+When user press register icon...............................................passed
+And user clicks on register button..........................................passed
+Then error messages appear..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test register" name="user didn't enter the same password" time="25.234">
+<failure message="" type="java.lang.AssertionError"><![CDATA[Given initialize register feature...........................................passed
+When user press register icon...............................................passed
+And user selects "male" and enters "attya" as first name, "mebed" as last name, "attyamebed@gmail.com" as email, "AttyaCO" as company, "Attya@mebed" as password and "Atty@mebed" as confirm password.passed
+And user set his birthday as follow "29" Day "7" Month "1994" Year..........passed
+And user clicks on register button..........................................passed
+Then user get non identical passwords.......................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at StepDefination.D01_registerStepDef.checkNonIdenticalMessage(D01_registerStepDef.java:79)
+	at ✽.user get non identical passwords(file:///E:/Work/Testing/ITIDA/Testing%20Front%20end/Automation-Testing-of-Ecommerce-Web-Application-master/E-commerce-App-Automation-Testing-main/src/main/resources/Feature/F01_Register.feature:26)
+]]></failure>
+</testcase>
+<testcase classname="test register" name="email already exist" time="34.983">
+<system-out><![CDATA[Given initialize register feature...........................................passed
+When user press register icon...............................................passed
+And user selects "male" and enters "attya" as first name, "mebed" as last name, "attyamebed@gmail.com" as email, "AttyaCO" as company, "Attya@mebed" as password and "Attya@mebed" as confirm password.passed
+And user set his birthday as follow "29" Day "7" Month "1994" Year..........passed
+And user clicks on register button..........................................passed
+Then email exist message appears............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Login Functionality" name="user could login with valid email and password" time="19.549">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When enter email "attyamebed@gmail.com" and password "Attya@mebed"..........passed
+And user press login........................................................passed
+Then user go to home page...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Login Functionality" name="user could login with invalid email and password" time="18.439">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When enter email "attya@gmail.com" and password "attya123"..................passed
+And user press login........................................................passed
+Then check on error message.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Login Functionality" name="Enter invalid email form" time="16.286">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When enter email "Att" and password "Meb"...................................passed
+Then check on email error message...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Login Functionality" name="user forget Password" time="19.523">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When user press forget password.............................................passed
+And user enter email "attyamebed@gmail.com".................................passed
+And user press recover button...............................................passed
+Then user gets instructions message has been sent...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="test currency" name="user change currency to euro" time="16.633">
+<system-out><![CDATA[Given initialize Currencies feature.........................................passed
+When user press on currencies...............................................passed
+And user chooses "euro".....................................................passed
+Then the product currency changes to "euro".................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with name" time="21.164">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "camera"....................................................passed
+And clicks on search........................................................passed
+Then user should find the "camera"..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with name 2" time="46.407">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "laptop"....................................................passed
+And clicks on search........................................................passed
+Then user should find the "laptop"..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with name 3" time="69.939">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "t-shirt"...................................................passed
+And clicks on search........................................................passed
+Then user should find the "t-shirt".........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with sku" time="23.86">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "LT_MIR_DC" as product sku..................................passed
+And clicks on search........................................................passed
+Then user should find the "LT_MIR_DC" as product sku........................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with sku 2" time="16.51">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "LE_TX1_CL" as product sku..................................passed
+And clicks on search........................................................passed
+Then user should find the "LE_TX1_CL" as product sku........................passed
+]]></system-out>
+</testcase>
+<testcase classname="test search" name=": search products with sku 3" time="19.537">
+<system-out><![CDATA[Given initialize Search feature.............................................passed
+When user types "CS_TSHIRT" as product sku..................................passed
+And clicks on search........................................................passed
+Then user should find the "CS_TSHIRT" as product sku........................passed
+]]></system-out>
+</testcase>
+<testcase classname="test hover to categories" name="test random hover" time="22.916">
+<system-out><![CDATA[Given initialize hover to categories feature................................passed
+When user select random category he should go its page......................passed
+]]></system-out>
+</testcase>
+<testcase classname="test slider" name="test nokia pic" time="15.217">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given initialize slider feature.............................................passed
+When user select Nokia picture..............................................passed
+Then user should navigate to Nokia page.....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefination.D06_homeSlidersStepDef.checkOnNokiaUrl(D06_homeSlidersStepDef.java:27)
+	at ✽.user should navigate to Nokia page(file:///E:/Work/Testing/ITIDA/Testing%20Front%20end/Automation-Testing-of-Ecommerce-Web-Application-master/E-commerce-App-Automation-Testing-main/src/main/resources/Feature/F06_homeSliders.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="test slider" name="test iphone pic" time="13.457">
+<failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given initialize slider feature.............................................passed
+When user select iphone picture.............................................passed
+Then user should navigate to iphone page....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefination.D06_homeSlidersStepDef.checkOnIphoneUrl(D06_homeSlidersStepDef.java:37)
+	at ✽.user should navigate to iphone page(file:///E:/Work/Testing/ITIDA/Testing%20Front%20end/Automation-Testing-of-Ecommerce-Web-Application-master/E-commerce-App-Automation-Testing-main/src/main/resources/Feature/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="test follow us" name="user clicks follow us icons" time="15.575">
+<system-out><![CDATA[Given initialize follow us feature..........................................passed
+When user clicks "facebook".................................................passed
+Then user should go to selected "https://www.facebook.com/nopCommerce"......passed
+]]></system-out>
+</testcase>
+<testcase classname="test follow us" name="user clicks follow us icons 2" time="15.449">
+<system-out><![CDATA[Given initialize follow us feature..........................................passed
+When user clicks "twitter"..................................................passed
+Then user should go to selected "https://twitter.com/nopCommerce"...........passed
+]]></system-out>
+</testcase>
+<testcase classname="test follow us" name="user clicks follow us icons 3" time="14.359">
+<failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given initialize follow us feature..........................................passed
+When user clicks "rss"......................................................passed
+Then user should go to selected "https://demo.nopcommerce.com/new-online-store-is-open".failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefination.D07_followUsStepDef.checkOnUrl(D07_followUsStepDef.java:33)
+	at ✽.user should go to selected "https://demo.nopcommerce.com/new-online-store-is-open"(file:///E:/Work/Testing/ITIDA/Testing%20Front%20end/Automation-Testing-of-Ecommerce-Web-Application-master/E-commerce-App-Automation-Testing-main/src/main/resources/Feature/F07_followUs.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="test follow us" name="user clicks follow us icons 4" time="43.465">
+<system-out><![CDATA[Given initialize follow us feature..........................................passed
+When user clicks "youtube"..................................................passed
+Then user should go to selected "https://www.youtube.com/user/nopCommerce"..passed
+]]></system-out>
+</testcase>
+<testcase classname="test wish list" name="test add HTC to wish list" time="21.205">
+<system-out><![CDATA[Given initialize wish list feature..........................................passed
+When user select to add HTC phone to wish list..............................passed
+Then user should get a success message......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test wish list" name="check on wish list cart" time="18.341">
+<system-out><![CDATA[Given initialize wish list feature..........................................passed
+When user select to add HTC phone to wish list..............................passed
+And click on wish list......................................................passed
+Then user should find the product...........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -100,7 +100,7 @@ public class P03_homePage {
         }
     }
     public void addProductToWishList(String productName) {
-        //get all web elements that have wish list button
+
         List<WebElement> products= Hooks.driver.findElements(By.cssSelector("button[title=\"Add to wishlist\"]"));
         if(productName!=null) {
             switch (productName){
