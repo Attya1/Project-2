@@ -8,25 +8,29 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+/***
+ * Testing add to wishList
+ */
+
 public class D08_WishlistStepDef {
-    private P03_homePage home;
+    private P03_homePage homePageObject;
     private String[] productsName={"Apple MacBook Pro 13-inch","HTC One M8 Android L 5.0 Lollipop"};
     @Given("initialize wish list feature")
-    public void init() {
-        home = new P03_homePage(Hooks.driver);
+    public void setup() {
+        homePageObject = new P03_homePage(Hooks.driver);
     }
     @When("user select to add HTC phone to wish list")
-    public void addProductToWishList() throws InterruptedException {
+    public void userAddsProductToWishList() throws InterruptedException {
         //adding htc phone
-        home.addProductToWishList(productsName[1]);
+        homePageObject.addProductToWishList(productsName[1]);
 
 
     }
     @Then("user should get a success message")
-    public void checkOnAddToWishMessage(){
+    public void checkOnUserAddingProductToWishMessage(){
         SoftAssert soft= new SoftAssert();
-        String actualMessageText= home.getAddToWishListMessageText();
-        String actualMessageBackGroundColor = home.getAddToWishListMessageBackGroundColor();
+        String actualMessageText= homePageObject.getAddToWishListMessageText();
+        String actualMessageBackGroundColor = homePageObject.getAddToWishListMessageBackGroundColor();
         String expectedText="The product has been added to your wishlist";
         String expectedColor="rgba(75, 176, 122, 1)";
         soft.assertTrue(expectedText.equals(actualMessageText));
@@ -35,16 +39,15 @@ public class D08_WishlistStepDef {
 
     }
     @And("click on wish list")
-    public void clickOnWishList() throws InterruptedException {
+    public void userClicksOnWishList() throws InterruptedException {
         Thread.sleep(6000);
-        home.goToWishList();
+        homePageObject.goToWishList();
 
     }
     @Then("user should find the product")
     public void checkOnProduct(){
-
-        System.out.println(home.findProductQty(productsName[1]));
-        Assert.assertTrue(home.findProductQty(productsName[1])>0);
+        System.out.println(homePageObject.findProductQty(productsName[1]));
+        Assert.assertTrue(homePageObject.findProductQty(productsName[1])>0);
 
 
     }

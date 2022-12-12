@@ -1,3 +1,4 @@
+
 package StepDefination;
 
 import io.cucumber.java.After;
@@ -10,10 +11,9 @@ public class Hooks {
 
     @Before
     public  static void OpenBrowser() throws InterruptedException {
-
-        String chromepage = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", chromepage);
-        driver= new ChromeDriver();
+        String chromePage = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromePage);
+        driver = new ChromeDriver();
         driver.navigate().to("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         Thread.sleep(1000);
